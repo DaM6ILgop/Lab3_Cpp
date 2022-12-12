@@ -1,0 +1,9 @@
+﻿  CustomExpressionEvaluator.cpp
+C:\Users\Lenovo\Desktop\2 КУРС\ЛАБЫ ПРОГИНГ\Lab3_Cpp\Lab3\CustomExpressionEvaluator.cpp(25,21): warning C4018: <: несоответствие типов со знаком и без знака
+  ExpressionEvaluator.cpp
+  Lab3.cpp
+  Multiplier.cpp
+  Summator.cpp
+C:\Users\Lenovo\Desktop\2 КУРС\ЛАБЫ ПРОГИНГ\Lab3_Cpp\Lab3\Summator.cpp(20,20): warning C4018: <: несоответствие типов со знаком и без знака
+  Создание кода...
+  Lab3.vcxproj -> C:\Users\Lenovo\Desktop\2 КУРС\ЛАБЫ ПРОГИНГ\Lab3_Cpp\Lab3\Debug\Lab3.exe
