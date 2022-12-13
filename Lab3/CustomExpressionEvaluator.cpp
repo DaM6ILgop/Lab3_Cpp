@@ -17,9 +17,11 @@
 		}
 	}
 	void CustomExpressionEvaluator::logToFile(const std::string filename) {
-		
+		time_t seconds = time(NULL);
+		size_t days = ((size_t)seconds / 3600) / 24;
+
 		std::ofstream log(filename, std::ios_base::app | std::ios_base::out);
-		log << "kjkjkj";
+		log << days<<" "<<asctime(localtime(&seconds));
 	}
 	void CustomExpressionEvaluator::calculate() {
 		for (int i = 0; i < vector.size(); i++){
