@@ -1,5 +1,5 @@
 ﻿#include "Human.h"
-//Вова гений
+//Вова Романов гений
 //Constructors
 Human::Human() {
 }
