@@ -1,26 +1,39 @@
 #pragma once
-#include <iostream>
+#include <iostream>  
+#include <fstream>
 class Human
 {
-protected:
-	std::string name, fatherName, sex, musicalInstruments;
-	int age, performanceScore;
 
+protected:
+
+	std::string name;  
+	std::string fatherName;
+	std::string sex;
+	std::string musicalInstruments;
+	
+	int age;
+	int performanceScore;
+
+	
+	
 
 public:
+
 	Human();
 
 	Human(std::string _name, std::string _fatherName, std::string _sex, int _age, std::string _musicalInstruments, int _performanceScore);
 	
-	//Getters
+	//Getters///////////////////////////////////////////////////
 	virtual int getScore(Human human);
 	
 	virtual std::string getMusicalInstruments(Human human);
 	
-	//Setters
+	//Setters///////////////////////////////////////////////////
 	virtual void setName(std::string _name);
 	
 	virtual void setFatherName(std::string _fatherName);
+
+	virtual void setSex(std::string _sex);
 	
 	virtual void setAge(int _age);
 
@@ -28,9 +41,9 @@ public:
 
 	virtual void setperformanceScore(int _performanceScore);
 
-	//Another
+	//Another//////////////////////////////////////////////////
+	virtual void serialize(std::string path);
 	virtual void print();
-
 	virtual ~Human();
 };
 
