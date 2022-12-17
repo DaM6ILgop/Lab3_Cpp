@@ -73,7 +73,7 @@ int main() {
 			human[i]->serialize(path);
 		}
 	default:
-		std::cout << "Что-то пошло не так";
+		
 		break;
 	}
 	
