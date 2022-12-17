@@ -65,7 +65,6 @@ void Human::print() {
 
 void Human::serialize(std::string path) {
 	std::ofstream fs;
-	//SetConsoleCP(1251);
 	fs.open(path, std::ofstream::app);
 	if (!fs.is_open()) {
 		std::cout << "File NOT FOUND!" << std::endl;
@@ -77,7 +76,6 @@ void Human::serialize(std::string path) {
 		
 		fs.close();
 	}
-	//SetConsoleCP(1251);
 }
 //Destructor of Class
 Human::~Human() {
