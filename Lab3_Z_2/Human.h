@@ -3,8 +3,7 @@
 #include <fstream>
 class Human
 {
-
-protected:
+private:
 
 	std::string name;  
 	std::string fatherName;
@@ -13,9 +12,6 @@ protected:
 	
 	int age;
 	int performanceScore;
-
-	
-	
 
 public:
 

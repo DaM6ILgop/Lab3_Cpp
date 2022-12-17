@@ -56,7 +56,6 @@ int main() {
 		}
 	}
 
-	
 	std::cout << "Нажмите 1 для записи в файл ";
 	
 	std::string path = "musician.txt";
@@ -76,7 +75,5 @@ int main() {
 		
 		break;
 	}
-	
-	
 }
 
