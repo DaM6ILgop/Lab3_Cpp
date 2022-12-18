@@ -4,11 +4,39 @@
 #include <fstream>
 #include <Windows.h>
 #include "Human.h"
-
+#include "Violinist.h"
+#include "Visitor.h"
+#include "Viewer.h"
+#include <stdio.h>
 
 int main() {
 
 	setlocale(LC_ALL, "ru");
+	srand(time(NULL));
+	
+	std::vector<int> vector = {1,2,3,4,5,6,7,8,9,10};
+	std::string vectorPath = "vectorPath.txt";
+
+	std::ofstream fs;
+	fs.open(vectorPath);
+	fs << "";
+	
+
+	for (int i = 0; i < vector.size(); i++) {
+		
+		fs.open(vectorPath, std::ofstream::app);
+		if (!fs.is_open()) {
+			std::cout << "File NOT FOUND!" << std::endl;
+			exit(0);
+		}
+		else {
+			
+			fs << vector[i]<<std::endl;
+
+			fs.close();
+		}
+	}
+
 	Human* human[5];
 	human[0] = new Human("Гоша", "Алексеевич", "Ж", 38, "Кларнет", 2 );
 
@@ -45,17 +73,51 @@ int main() {
 	human[4]->setperformanceScore(4);
 
 	for (int i = 0; i < 5; i++) {
-		if (human[i]->getMusicalInstruments(*human[i]) == "Пианино") {
+		if (human[i]->getMusicalInstruments() == "Пианино") {
 			human[i]->print();
 		}
 	}
 
 	for (int i = 0; i < 5; i++) {
-		if (human[i]->getMusicalInstruments(*human[i]) != "Пианино") {
+		if (human[i]->getMusicalInstruments() != "Пианино") {
 			human[i]->print();
 		}
 	}
+	
+	
+	Violinist violinist;
+	
+	violinist.setName("Alex");
+	violinist.setSex("М");
+	violinist.setAge(27);
+	violinist.setMusicalInstruments("Viol");
+	violinist.visit();
 
+	Viewer viewer[3];
+	for (size_t i = 0; i < 3; i++){
+	
+		vector.erase(vector.begin() + viewer[i].visit(vector.size()));
+	}
+
+	fs.open(vectorPath);
+	fs << "";
+
+	for (int i = 0; i < vector.size(); i++) {
+		std::ofstream fs;
+		fs.open(vectorPath, std::ofstream::app);
+		if (!fs.is_open()) {
+			std::cout << "File NOT FOUND!" << std::endl;
+			exit(0);
+		}
+		else {
+
+			fs << vector[i] << std::endl;
+			fs.close();
+		}
+	}
+	
+	
+	
 	std::cout << "Нажмите 1 для записи в файл ";
 	
 	std::string path = "musician.txt";

@@ -22,7 +22,7 @@ public:
 	//Getters///////////////////////////////////////////////////
 	virtual int getScore(Human human);
 	
-	virtual std::string getMusicalInstruments(Human human);
+	virtual std::string getMusicalInstruments(/*Human human*/);
 	
 	//Setters///////////////////////////////////////////////////
 	virtual void setName(std::string _name);

@@ -20,7 +20,7 @@ int Human::getScore(Human human) {
 	return performanceScore;
 }
 
-std::string Human::getMusicalInstruments(Human human) {
+std::string Human::getMusicalInstruments(/*Human human*/) {
 	return musicalInstruments;
 }
 
@@ -59,7 +59,7 @@ void Human::print() {
 		<< "\nПол: " << this->sex
 		<< "\nВозраст: " << this->age
 		<< "\nМузыкальный инструмент: " << this->musicalInstruments
-		<< "\nБалы учасника: " << this->performanceScore;
+		<< "\nБалы участника: " << this->performanceScore;
 	std::cout << "\n";
 }
 
