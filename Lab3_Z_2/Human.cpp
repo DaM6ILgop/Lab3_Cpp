@@ -1,5 +1,5 @@
 ﻿#include "Human.h"
-//Вова Романов гений
+
 
 
 //Constructors
